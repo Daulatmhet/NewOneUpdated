@@ -8,12 +8,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.tmb.driver.DriverManager;
 
+import Iconstants.FramworkConstants;
+
 public class BasePage {
 	
 	
 	
 	protected void click(By by , String waitstrategy)
 	{
+		/*
+		 * We want to make sure can only choose from list of predefined options
+		 *  
+		 */
 		if(waitstrategy.equalsIgnoreCase("clickable"))
 		{
 			explicitWaitForElementToBeClickable(by);
@@ -52,7 +58,7 @@ public class BasePage {
 	
 	private void explicitWaitForElementToBeClickable(By by)
 	{
-		 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10))
+		 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FramworkConstants.getExplicitwait()))
 				.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
@@ -60,10 +66,12 @@ public class BasePage {
 	private void explicitWaitForElementToBePresent(By by)
 	{
 		
-		 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10))
+		 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FramworkConstants.getExplicitwait()))
 			.until(ExpectedConditions.presenceOfElementLocated(by));
 	}
 	
+	
+	 
 	
 	
 	
