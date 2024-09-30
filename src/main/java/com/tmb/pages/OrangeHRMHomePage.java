@@ -2,6 +2,9 @@ package com.tmb.pages;
 
 import org.openqa.selenium.By;
 
+import com.tmb.driver.DriverManager;
+import com.tmb.enums.WaitStrategy;
+
 public  class OrangeHRMHomePage extends BasePage  {
 	
 	
@@ -13,24 +16,23 @@ public  class OrangeHRMHomePage extends BasePage  {
   
   
   public OrangeHRMHomePage clickwelcome() throws InterruptedException {
-	  Thread.sleep(1500);
+	 // Thread.sleep(1500);
 	 // DriverManager.getDriver().findElement(link_welcome).click();
 	  
-	  click(link_welcome, "present");
+	  click(link_welcome, WaitStrategy.PRESENCE);
 	  return this;
   }
-  
-  
   
   
   public OrangeHRMLoginPage clickLogout() throws InterruptedException
   {
 		
-	  Thread.sleep(1000);
+	//ssssssssssss  Thread.sleep(1000);
 	  
 	  
 	//  DriverManager.getDriver().findElement(link_logout).click();
-	  click(link_logout, "clickable");
+	  
+	  click(link_logout, WaitStrategy.CLICKABLE);
 	  
 	   return new OrangeHRMLoginPage();
 	   

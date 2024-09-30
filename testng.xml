@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="1" name="Test">
     <classes>
-      <class name="Test.LoginPage"/>
-      <class name="Test.HomePageTest"/>
+      <class name="Test.OrangeHRMTestCases"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

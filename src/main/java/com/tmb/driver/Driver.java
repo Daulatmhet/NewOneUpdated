@@ -5,7 +5,8 @@ import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.tmb.utils.ReadPropertyFile;
+import com.tmb.enums.ConfigProperties;
+import com.tmb.utils.PropertyUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,6 +18,7 @@ public class Driver
 		
 	}
 	
+	
 
 	private static WebDriver driver;
 	
@@ -26,15 +28,16 @@ public class Driver
 		if(Objects.isNull(driver))
 		{
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
 		
-	    DriverManager.	setDriver(driver);
-	    DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+		
+	    DriverManager.	setDriver(new ChromeDriver());
+	    DriverManager.getDriver().get(PropertyUtil.get(ConfigProperties.URL)); 
 	    
 	    
 		
 	}
 	}
+	
 	
 	
 	

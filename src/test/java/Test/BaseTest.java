@@ -26,7 +26,7 @@ public class BaseTest {
 	@AfterMethod
 	public void teardown() throws Exception
 	{
-		Driver.initDriver();
+		Driver.quitDriver();
 		
 	}
 	

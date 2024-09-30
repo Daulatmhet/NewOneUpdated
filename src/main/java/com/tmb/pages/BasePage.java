@@ -1,55 +1,37 @@
 package com.tmb.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
 
 import com.tmb.driver.DriverManager;
-
-import Iconstants.FramworkConstants;
+import com.tmb.enums.WaitStrategy;
+import com.tmb.factories.ExplicitWaitFactory;
 
 public class BasePage {
 	
 	
 	
-	protected void click(By by , String waitstrategy)
+	protected void click(By by , WaitStrategy waitstrategy)
 	{
 		/*
 		 * We want to make sure can only choose from list of predefined options
 		 *  
 		 */
-		if(waitstrategy.equalsIgnoreCase("clickable"))
-		{
-			explicitWaitForElementToBeClickable(by);
-		}
-		else if (waitstrategy.equalsIgnoreCase("present"))
-		{
-			explicitWaitForElementToBePresent(by);
-		}
+		   WebElement element = ExplicitWaitFactory.performExplicitWait(waitstrategy, by);
+		      element.click();
 		
+	} 
+	
+	
+	protected void sendkeys(By by , String value , WaitStrategy waitstrategy)
+	{
 		
-		DriverManager.getDriver().findElement(by).click();
+		WebElement element=	ExplicitWaitFactory.performExplicitWait(waitstrategy, by);
+		  element.sendKeys(value);
 		
 	}
 	
-	protected void sendkeys(By by , String value , String waitstrategy)
-	{
-		
-		if(waitstrategy.equalsIgnoreCase("clickable"))
-		{
-			explicitWaitForElementToBeClickable(by);
-		}
-		else if (waitstrategy.equalsIgnoreCase("present"))
-		{
-			explicitWaitForElementToBePresent(by);
-		}
-		
-		DriverManager.getDriver().findElement(by).sendKeys(value);
-		
-		
-	}
+	
 	
 	protected String getPageTitle()
 	{ 
@@ -58,16 +40,14 @@ public class BasePage {
 	
 	private void explicitWaitForElementToBeClickable(By by)
 	{
-		 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FramworkConstants.getExplicitwait()))
-				.until(ExpectedConditions.elementToBeClickable(by));
+		
 	}
 	
 	
 	private void explicitWaitForElementToBePresent(By by)
 	{
 		
-		 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FramworkConstants.getExplicitwait()))
-			.until(ExpectedConditions.presenceOfElementLocated(by));
+		
 	}
 	
 	

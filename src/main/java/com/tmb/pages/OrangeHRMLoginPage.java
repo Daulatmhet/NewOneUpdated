@@ -3,6 +3,7 @@ package com.tmb.pages;
 import org.openqa.selenium.By;
 
 import com.tmb.driver.DriverManager;
+import com.tmb.enums.WaitStrategy;
 
 public final class OrangeHRMLoginPage extends BasePage{
 
@@ -14,22 +15,24 @@ public final class OrangeHRMLoginPage extends BasePage{
 	private final By button_login = By.xpath("//button[@type='submit']");
 	
 	
-	
+	 
 	public OrangeHRMLoginPage enterusername(String username) {
 		
 		//We are reduced the code
 		
-	//	DriverManager.getDriver().findElement(textbox_username).sendKeys(username);
+	// DriverManager.getDriver().findElement(textbox_username).sendKeys(username);
 		
-		sendkeys(textbox_username, username , "Present");
+		sendkeys(textbox_username, username , WaitStrategy.PRESENCE);
 		return this;
 	}
 	
+	
+	
 	public OrangeHRMLoginPage enterPassword(String password)
 	{
-		//DriverManager.getDriver().findElement(textbox_password).sendKeys(password);
+	//	DriverManager.getDriver().findElement(textbox_password).sendKeys(password);
 		
-		sendkeys(textbox_password, password , "Present");
+		sendkeys(textbox_password, password ,WaitStrategy.PRESENCE);
 		return this;
 	}
 	
@@ -37,7 +40,7 @@ public final class OrangeHRMLoginPage extends BasePage{
 	{
 	//	DriverManager.getDriver().findElement(button_login).click();
 		
-		click(button_login , "clickable");
+		click(button_login , WaitStrategy.CLICKABLE);
 		
 		return new OrangeHRMHomePage();
 	}

@@ -9,15 +9,17 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.tmb.enums.ConfigProperties;
+
 import Iconstants.FramworkConstants;
 
-public final class ReadPropertyFile {
+public final class PropertyUtil {
 	
 	
 	
 	//If you passing 100 value and reading 100 data passing
 	
-	private ReadPropertyFile()
+	private PropertyUtil()
 	{
 		
 		
@@ -61,33 +63,35 @@ public final class ReadPropertyFile {
 		
 	}
 	
-	public static String get(String key) throws Exception
-	{
-		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key)))
-		{
-			throw new Exception("Property name" + key + "is not found. Please check config.properties");
-		}
-		return CONFIGMAP.get(key);
-		
-	}
-}
+//	public static String get( ConfigProperties key) throws Exception
+//	{
+//		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key)))
+//		{
+//			throw new Exception("Property name" + key + "is not found. Please check config.properties");
+//		}
+//		return CONFIGMAP.get(key.name().toLowerCase());
+//		
+//	}
+//}
+
 
 
 
 //Two method fill compartable use those code
 
 	
-//	
-//	public static String getValue(String key) throws Exception
-//	{
-//		
-//		if(Objects.isNull(property.getProperty(key)) || Objects.isNull(key))
-//		{
-//			throw new Exception("Property name" + key + "is not found. Please check config.properties");
-//		}
-//		return property.getProperty(key);
-//		
-//		
-//	}
-//
-//}
+	
+	public static String get( ConfigProperties key) throws Exception
+	{
+		
+		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key)))
+		{
+		  //	throw new Exception("Property name" + key + "is not found. Please check config.properties");
+		}
+		return CONFIGMAP.get(key.name().toLowerCase());
+		
+		
+	}
+	
+
+}
