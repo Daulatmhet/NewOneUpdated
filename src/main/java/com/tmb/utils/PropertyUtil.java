@@ -32,11 +32,13 @@ public final class PropertyUtil {
 		try {
 		FileInputStream file = new FileInputStream(FramworkConstants.getConfigFilepath());
 		property.load(file);
-//		
+		
+		
 //		for(Object key : property.keySet())
 //		{
 //			CONFIGMAP.put(String.valueOf(key),String.valueOf(property.get(key)));
 //		}
+		
 		
 	for(Map.Entry<Object, Object>entry:property.entrySet())
 		{
@@ -45,12 +47,11 @@ public final class PropertyUtil {
 		
 	
 	//trim remove trailing and leading spaces
-	
-		
 		//If You know Lambda Expression
 		// so you can go this approch
 	//	property.entrySet().forEach(entry ->CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue())));
 		
+	
 	
 		}catch(FileNotFoundException e) {
 			
@@ -73,9 +74,7 @@ public final class PropertyUtil {
 //		
 //	}
 //}
-
-
-
+	
 
 //Two method fill compartable use those code
 
@@ -84,9 +83,9 @@ public final class PropertyUtil {
 	public static String get( ConfigProperties key) throws Exception
 	{
 		
-		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key)))
+		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase())))
 		{
-		  //	throw new Exception("Property name" + key + "is not found. Please check config.properties");
+		  	throw new Exception("Property name" + key + "is not found. Please check config.properties");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 		

@@ -5,17 +5,15 @@ import org.testng.annotations.Test;
 
 import com.tmb.pages.OrangeHRMLoginPage;
 
+import comtmb.Reports.ExtentReport;
+
 public final class OrangeHRMTestCases extends BaseTest {
 	
 	
 	private OrangeHRMTestCases()
-	{
-		
-	}
-	
-	
-	
+	{}
 
+	
 	@Test
 	public void LoginLogoutTest() throws InterruptedException
 	{
@@ -28,20 +26,18 @@ public final class OrangeHRMTestCases extends BaseTest {
 			isEqualTo("OrangeHRM");
 			
 			
-		
-			
 	/*	Thread.sleep(1500);
 		
 		OrangeHRMHomePage home = new OrangeHRMHomePage();
 		home.clickwelcome().clickLogout();
-		
-		
-		
 		Thread.sleep(1000);*/
 		
 		
 		
 	}
+	
+	
+	
 
 }
 

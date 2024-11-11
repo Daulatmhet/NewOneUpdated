@@ -21,7 +21,7 @@ public class ExplicitWaitFactory {
 		if(waitstrategy == WaitStrategy.CLICKABLE)
 		{
 			
-			 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FramworkConstants.getExplicitwait()))
+		  element=	 new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FramworkConstants.getExplicitwait()))
 				.until(ExpectedConditions.elementToBeClickable(by));
 		}
 		else if (waitstrategy== WaitStrategy.PRESENCE)

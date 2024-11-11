@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import com.tmb.driver.DriverManager;
 import com.tmb.enums.WaitStrategy;
 
+import comtmb.Reports.ExtentLogger;
+import comtmb.Reports.ExtentManager;
+
 public final class OrangeHRMLoginPage extends BasePage{
 
 	
@@ -18,41 +21,33 @@ public final class OrangeHRMLoginPage extends BasePage{
 	 
 	public OrangeHRMLoginPage enterusername(String username) {
 		
-		//We are reduced the code
-		
-	// DriverManager.getDriver().findElement(textbox_username).sendKeys(username);
-		
-		sendkeys(textbox_username, username , WaitStrategy.PRESENCE);
+		sendkeys(textbox_username, username , WaitStrategy.PRESENCE, "Username");
 		return this;
 	}
 	
-	
-	
 	public OrangeHRMLoginPage enterPassword(String password)
 	{
-	//	DriverManager.getDriver().findElement(textbox_password).sendKeys(password);
 		
-		sendkeys(textbox_password, password ,WaitStrategy.PRESENCE);
+		sendkeys(textbox_password, password ,WaitStrategy.PRESENCE,"Passwrd" );
 		return this;
+		
 	}
 	
 	public OrangeHRMHomePage clickLogin()
 	{
-	//	DriverManager.getDriver().findElement(button_login).click();
-		
-		click(button_login , WaitStrategy.CLICKABLE);
-		
+		click(button_login, WaitStrategy.PRESENCE,"Login Button");
 		return new OrangeHRMHomePage();
+		
 	}
+	
 	
 	public String getTitle()
 	{
 		return getPageTitle();
 		
 	}
-	
-	
 	}
+
 
 
 

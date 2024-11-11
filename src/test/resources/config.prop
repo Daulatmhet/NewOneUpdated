@@ -1,4 +1,15 @@
 url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 browser=chrome
   
+overridereports=yes
+
+passedstepsscreenshot=yes
+
+failedstepsscreenshot=yes
+
+skippedstepsscreenshot=yes
+
+
+browser=chrome
+
   

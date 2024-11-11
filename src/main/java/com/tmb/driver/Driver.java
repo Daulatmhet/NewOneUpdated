@@ -47,7 +47,7 @@ public class Driver
 	{
 		if(Objects.nonNull(DriverManager.getDriver()))
 		{
-	DriverManager.getDriver().quit();
+	//DriverManager.getDriver().quit();
 	DriverManager.unload();
 		
 		
