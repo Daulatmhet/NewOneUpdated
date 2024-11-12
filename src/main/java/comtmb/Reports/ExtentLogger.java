@@ -32,12 +32,13 @@ public class ExtentLogger {
    
 	public static void pass(String message , boolean isScreenshotNeeded) throws Exception
 	{
-		if(PropertyUtil.get(ConfigProperties.PASSEDSTEPSSCREENSHOT).equalsIgnoreCase("yes")
+		if(PropertyUtil.get(ConfigProperties.PASSEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes")
 				&& isScreenshotNeeded)
 		{
 			ExtentManager.getExtentTest().pass(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
 			
 		}
+		
 		else {
 			pass(message);
 		}
@@ -45,10 +46,10 @@ public class ExtentLogger {
 	
 	public static void fail(String message , boolean isScreenshotNeeded) throws Exception
 	{
-		if(PropertyUtil.get(ConfigProperties.FAILEDSTEPSSCREENSHOT).equalsIgnoreCase("yes")
+		if(PropertyUtil.get(ConfigProperties.FAILEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes")
 				&& isScreenshotNeeded)
 		{
-			ExtentManager.getExtentTest().pass(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
+			ExtentManager.getExtentTest().fail(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
 			
 		}
 		else {
@@ -58,16 +59,18 @@ public class ExtentLogger {
 	
 	public static void skip(String message , boolean isScreenshotNeeded) throws Exception
 	{
-		if(PropertyUtil.get(ConfigProperties.SKIPPEDSTEPSSCREENSHOT).equalsIgnoreCase("yes")
+		if(PropertyUtil.get(ConfigProperties.SKIPPEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes")
 				&& isScreenshotNeeded)
 		{
-			ExtentManager.getExtentTest().pass(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
+			ExtentManager.getExtentTest().skip(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
 			
 		}
 		else {
 			skip(message);
 		}
 	}
+	
+	
 	
 	public static String getBase64Image() {
 		return ((TakesScreenshot)DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);

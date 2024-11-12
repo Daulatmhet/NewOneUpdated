@@ -12,48 +12,48 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Driver 
 {
-	
+
 	private Driver(){
-		
-		
+
+
 	}
-	
-	
+
+
 
 	private static WebDriver driver;
-	
-	
+
+
 	public static void initDriver() throws Exception
 	{
 		if(Objects.isNull(driver))
 		{
-		WebDriverManager.chromedriver().setup();
-		
-		
-	    DriverManager.	setDriver(new ChromeDriver());
-	    DriverManager.getDriver().get(PropertyUtil.get(ConfigProperties.URL)); 
-	    
-	    
-		
+			WebDriverManager.chromedriver().setup();
+
+
+			DriverManager.	setDriver(new ChromeDriver());
+			DriverManager.getDriver().get(PropertyUtil.get(ConfigProperties.URL)); 
+
+
+
+		}
 	}
-	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	public static void quitDriver()
 	{
 		if(Objects.nonNull(DriverManager.getDriver()))
 		{
-	//DriverManager.getDriver().quit();
-	DriverManager.unload();
-		
-		
+			DriverManager.getDriver().quit();
+			DriverManager.unload();
+
+
+		}
 	}
-	}
-	
-	
+
+
 }
 

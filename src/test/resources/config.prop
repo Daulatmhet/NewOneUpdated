@@ -3,11 +3,11 @@ browser=chrome
   
 overridereports=yes
 
-passedstepsscreenshot=yes
+passedstepsscreenshots=no
 
-failedstepsscreenshot=yes
+failedstepsscreenshots=yes
 
-skippedstepsscreenshot=yes
+skippedstepsscreenshots=yes
 
 
 browser=chrome

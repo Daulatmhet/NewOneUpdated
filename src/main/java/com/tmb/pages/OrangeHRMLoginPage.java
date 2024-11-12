@@ -19,19 +19,20 @@ public final class OrangeHRMLoginPage extends BasePage{
 	
 	
 	 
-	public OrangeHRMLoginPage enterusername(String username) {
+	public OrangeHRMLoginPage enterusername(String username) throws Exception {
 		
 		sendkeys(textbox_username, username , WaitStrategy.PRESENCE, "Username");
 		return this;
 	}
 	
-	public OrangeHRMLoginPage enterPassword(String password)
+	public OrangeHRMLoginPage enterPassword(String password) throws Exception
 	{
 		
-		sendkeys(textbox_password, password ,WaitStrategy.PRESENCE,"Passwrd" );
+		sendkeys(textbox_password, password ,WaitStrategy.PRESENCE,"Password" );
 		return this;
 		
 	}
+	
 	
 	public OrangeHRMHomePage clickLogin()
 	{

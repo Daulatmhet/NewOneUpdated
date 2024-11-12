@@ -11,21 +11,32 @@ public class FramworkConstants {
 	}
 	    private static final String  RESOURCEPATH= System.getProperty("user.dir")+"/src/test/resources";
 		private static final String CONFIGPATH = RESOURCEPATH+"/config.prop";
-		public static final String EXTENTREPORTPATH = System.getProperty("user.dir")+"/extent-test-output/index.html";
+		private static final String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir")+"/extent-test-output/index.html";
+		private static String extentReportFilepath = "";
 		
 		
-		public static String getExtentreportpath() throws Exception {
+		
+		public static String getExtentReportFilepath() throws Exception {
 			
-			if(PropertyUtil.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("yes"))
-			{
-				return EXTENTREPORTPATH+"/"+System.currentTimeMillis()+"index.html";
-			}
-			else {
+			if(extentReportFilepath.isEmpty()) {
 				
-				return EXTENTREPORTPATH+"/"+ "index.html";
+				extentReportFilepath = createReportPath();
 			}
-			
+			return extentReportFilepath;
 		}
+      
+		// this method take eyrything
+		private static String createReportPath() throws Exception
+		{
+			if(PropertyUtil.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")){
+				
+				return EXTENTREPORTFOLDERPATH+System.currentTimeMillis()+"/index.html";
+			}
+			else
+			{
+				return EXTENTREPORTFOLDERPATH+"/index.html";
+			}
+		}	
 		private static final int EXPLICITWAIT = 20;
 		
 		public static int getExplicitwait() {

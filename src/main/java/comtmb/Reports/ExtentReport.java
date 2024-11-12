@@ -2,7 +2,6 @@ package comtmb.Reports;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.IOException;
 import java.util.Objects;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -25,7 +24,7 @@ public final class ExtentReport {
 		
 		if(Objects.isNull(extent))
 		 extent = new ExtentReports();
-		 ExtentSparkReporter spark = new ExtentSparkReporter(FramworkConstants.getExtentreportpath());
+		 ExtentSparkReporter spark = new ExtentSparkReporter(FramworkConstants.getExtentReportFilepath());
 		 extent.attachReporter(spark);
 		 spark.config().setTheme(Theme.STANDARD);
 		 spark.config().setDocumentTitle("TMB Report");
@@ -33,14 +32,14 @@ public final class ExtentReport {
 	}
 
 	
-	public static void flushReports() throws IOException
+	public static void flushReports() throws Exception
 	{
 		if(Objects.nonNull(extent))
 		{
 			
 		extent.flush();
 		}
-		Desktop.getDesktop().browse(new File("index.html").toURI());
+		Desktop.getDesktop().browse(new File(FramworkConstants.getExtentReportFilepath()).toURI());
 	}
 	
 	public static void createTest(String testcasename)
@@ -49,5 +48,4 @@ public final class ExtentReport {
 	}
 	
 	
-
 }

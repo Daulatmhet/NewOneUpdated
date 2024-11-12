@@ -13,7 +13,7 @@ public class BasePage {
 	
 	
 	
-	protected void click(By by , WaitStrategy waitstrategy, String elementname)
+	protected void click(By by , WaitStrategy waitstrategy, String elementname) 
 	{
 		/*
 		 * We want to make sure can only choose from list of predefined options
@@ -21,21 +21,30 @@ public class BasePage {
 		 */
 		   WebElement element = ExplicitWaitFactory.performExplicitWait(waitstrategy, by);
 		      element.click();
-		      ExtentLogger.pass(elementname+"is clicked");
+		      try {
+				ExtentLogger.pass(elementname+"is clicked",true);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		  
 	}  
 	
-	protected void sendkeys(By by , String value , WaitStrategy waitstrategy, String elementname) throws Exception
+	protected void sendkeys(By by , String value , WaitStrategy waitstrategy, String elementname) 
 	{ 
 		
 		WebElement element=	ExplicitWaitFactory.performExplicitWait(waitstrategy, by);
 		  element.sendKeys(value);
-		  ExtentLogger.pass(value+ "is entered sucessfully in"+ elementname , true); 
+		  try {
+			ExtentLogger.pass(value+ "is entered sucessfully in"+ elementname , true);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		
 	}
 	
-	
-	
+
 	protected String getPageTitle()
 	{ 
 		return DriverManager.getDriver().getTitle();

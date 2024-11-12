@@ -7,6 +7,7 @@ import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import comtmb.Reports.ExtentLogger;
 import comtmb.Reports.ExtentReport;
 public class ListenerClass implements ITestListener , ISuiteListener
 {
@@ -18,7 +19,7 @@ public class ListenerClass implements ITestListener , ISuiteListener
 		try {
 			ExtentReport.initReports();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -32,7 +33,11 @@ public class ListenerClass implements ITestListener , ISuiteListener
 		} catch (IOException e) {
 			
 			e.printStackTrace();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
 		}
+		
 	}
 	
 	@Override
@@ -45,14 +50,20 @@ public class ListenerClass implements ITestListener , ISuiteListener
 	@Override
 	public void onTestSuccess (ITestResult result)
 	{
-		ExtentReport.createTest(result.getMethod().getMethodName()+ "is passed");
+		ExtentReport.createTest(result.getMethod().getMethodName()+ "is passed" );
 		
 	}
 	
 	@Override
 	public void onTestFailure (ITestResult result)
 	{
-		ExtentReport.createTest(result.getMethod().getMethodName()+ "is Failed");
+		
+		try {
+			ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -62,6 +73,7 @@ public class ListenerClass implements ITestListener , ISuiteListener
 		ExtentReport.createTest(result.getMethod().getMethodName()+ "is Skipped");
 		
 	}
+	
 	
 	
 
