@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Daulappa\eclipse-workspace\NEWFramworks_2K24\testng.xml</span>
+                    <span>C:\Users\lenovo\git\NewOneUpdated\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.OrangeHRMTestCases" class="method navigator-link" hash-for-method="LoginLogoutTest(Admin, admin)">LoginLogoutTest(Admin, admin)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test.OrangeHRMTestCases" class="method navigator-link" hash-for-method="loginLogoutTest({fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123})">loginLogoutTest({fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -117,7 +117,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.OrangeHRMTestCases" class="method navigator-link" hash-for-method="LoginLogoutTest(Admin, admin123)">LoginLogoutTest(Admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test.OrangeHRMTestCases" class="method navigator-link" hash-for-method="loginLogoutTest({fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin})">loginLogoutTest({fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.OrangeHRMTestCases" class="method navigator-link" hash-for-method="newTest({fname=, password=admin123, testname=newTest, execute=yes, username=Admin})">newTest({fname=, password=admin123, testname=newTest, execute=yes, username=Admin})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -140,31 +145,31 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginLogoutTest(Admin, admin)">
-                  </a> <!-- LoginLogoutTest(Admin, admin) -->
-                  <span class="method-name">LoginLogoutTest</span>
-                  <span class="parameters">(Admin,admin)</span>
+                  <a name="loginLogoutTest({fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123})">
+                  </a> <!-- loginLogoutTest({fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123}) -->
+                  <span class="method-name">loginLogoutTest</span>
+                  <span class="parameters">({fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123})</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at com.tmb.factories.ExplicitWaitFactory.performExplicitWait(ExplicitWaitFactory.java:30)
 	at com.tmb.pages.BasePage.click(BasePage.java:22)
 	at com.tmb.pages.OrangeHRMHomePage.clickwelcome(OrangeHRMHomePage.java:22)
-	at Test.OrangeHRMTestCases.LoginLogoutTest(OrangeHRMTestCases.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at Test.OrangeHRMTestCases.loginLogoutTest(OrangeHRMTestCases.java:22)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span&quot;}
-  (Session info: chrome=130.0.6723.92)
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9ccd8609371808c9f74cfd2ea9331c66, findElement {using=xpath, value=//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\Daulappa\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54653}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54653/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9ccd8609371808c9f74cfd2ea9331c66
+Command: [2ceb7342d58b5c665f098ca9b596ed4f, findElement {using=xpath, value=//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53783}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53783/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ceb7342d58b5c665f098ca9b596ed4f
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -179,9 +184,11 @@ Session ID: 9ccd8609371808c9f74cfd2ea9331c66
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 24 more
-... Removed 18 stack frames
+	... 22 more
+... Removed 17 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(To check whether the user can sucessfully login and logout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,10 +201,22 @@ Session ID: 9ccd8609371808c9f74cfd2ea9331c66
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginLogoutTest(Admin, admin123)">
-                  </a> <!-- LoginLogoutTest(Admin, admin123) -->
-                  <span class="method-name">LoginLogoutTest</span>
-                  <span class="parameters">(Admin,admin123)</span>
+                  <a name="loginLogoutTest({fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin})">
+                  </a> <!-- loginLogoutTest({fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin}) -->
+                  <span class="method-name">loginLogoutTest</span>
+                  <span class="parameters">({fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin})</span>
+                  <em>
+(To check whether the user can sucessfully login and logout)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="newTest({fname=, password=admin123, testname=newTest, execute=yes, username=Admin})">
+                  </a> <!-- newTest({fname=, password=admin123, testname=newTest, execute=yes, username=Admin}) -->
+                  <span class="method-name">newTest</span>
+                  <span class="parameters">({fname=, password=admin123, testname=newTest, execute=yes, username=Admin})</span>
+                  <em>
+(To check whether this test is executed)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,21 +224,22 @@ Session ID: 9ccd8609371808c9f74cfd2ea9331c66
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Daulappa\eclipse-workspace\NEWFramworks_2K24\testng.xml</span>
+            <span class="header-content">C:\Users\lenovo\git\NewOneUpdated\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; data-provider-thread-count=&quot;2&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite data-provider-thread-count=&quot;3&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.HRM.Listeners.ListenerClass&quot;/&gt;
+    &lt;listener class-name=&quot;com.HRM.Listeners.MethodInterceptor&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Test.OrangeHRMTestCases&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,7 +251,7 @@ Session ID: 9ccd8609371808c9f74cfd2ea9331c66
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -257,20 +277,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginLogoutTest')
+data.setCell(0, 1, 'loginLogoutTest')
 data.setCell(0, 2, 'Test.OrangeHRMTestCases')
-data.setCell(0, 3, 24612);
+data.setCell(0, 3, 22778);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'LoginLogoutTest')
+data.setCell(1, 1, 'loginLogoutTest')
 data.setCell(1, 2, 'Test.OrangeHRMTestCases')
-data.setCell(1, 3, 6051);
+data.setCell(1, 3, 7570);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'newTest')
+data.setCell(2, 2, 'Test.OrangeHRMTestCases')
+data.setCell(2, 3, 6635);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -298,30 +322,42 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test.OrangeHRMTestCases</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(public void Test.OrangeHRMTestCases.LoginLogoutTest(java.lang.String,java.lang.String) throws java.l...)</span>
+                <span class="method-name">setup(public void Test.OrangeHRMTestCases.loginLogoutTest(java.util.Map) throws java.lang.Exception)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginLogoutTest(Admin, admin123)</span>
-                <span class="method-start">12018 ms</span>
+                <span class="method-name">loginLogoutTest({fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin})</span>
+                <span class="method-start">11956 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">18078 ms</span>
+                <span class="method-start">19706 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setup(public void Test.OrangeHRMTestCases.LoginLogoutTest(java.lang.String,java.lang.String) throws java.l...)</span>
-                <span class="method-start">20442 ms</span>
+                <span class="method-name">setup(public void Test.OrangeHRMTestCases.loginLogoutTest(java.util.Map) throws java.lang.Exception)</span>
+                <span class="method-start">22331 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">LoginLogoutTest(Admin, admin)</span>
-                <span class="method-start">22623 ms</span>
+                <span class="method-name">loginLogoutTest({fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123})</span>
+                <span class="method-start">38292 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">47346 ms</span>
+                <span class="method-start">61334 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void Test.OrangeHRMTestCases.newTest(java.util.Map) throws java.lang.Exception)</span>
+                <span class="method-start">62225 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">newTest({fname=, password=admin123, testname=newTest, execute=yes, username=Admin})</span>
+                <span class="method-start">69732 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">76367 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

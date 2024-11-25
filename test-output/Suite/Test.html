@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 12 16:18:45 IST 2024</td>
+<td>Started on:</td><td>Sun Nov 24 12:44:50 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>39 seconds (39271 ms)</td>
+<tr><td>Total time:</td><td>78 seconds (78436 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,28 +76,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Test.OrangeHRMTestCases.LoginLogoutTest()'><b>LoginLogoutTest</b><br>Test class: Test.OrangeHRMTestCases<br>Parameters: Admin, admin</td>
+<td title='Test.OrangeHRMTestCases.loginLogoutTest()'><b>loginLogoutTest</b><br>Test class: Test.OrangeHRMTestCases<br>Test method: To check whether the user can sucessfully login and logout<br>Parameters: {fname=subscribe, password=admin123, testname=loginLogoutTest, execute=yes, username=admin123}</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at com.tmb.factories.ExplicitWaitFactory.performExplicitWait(ExplicitWaitFactory.java:30)
 	at com.tmb.pages.BasePage.click(BasePage.java:22)
 	at com.tmb.pages.OrangeHRMHomePage.clickwelcome(OrangeHRMHomePage.java:22)
-	at Test.OrangeHRMTestCases.LoginLogoutTest(OrangeHRMTestCases.java:24)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at Test.OrangeHRMTestCases.loginLogoutTest(OrangeHRMTestCases.java:22)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span&quot;}
-  (Session info: chrome=130.0.6723.92)
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3b8e97984be5b8e736b7c9401d552458, findElement {using=xpath, value=//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\Daulappa\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54389}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54389/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b8e97984be5b8e736b7c9401d552458
+Command: [2ceb7342d58b5c665f098ca9b596ed4f, findElement {using=xpath, value=//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53783}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53783/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ceb7342d58b5c665f098ca9b596ed4f
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -112,17 +112,19 @@ Session ID: 3b8e97984be5b8e736b7c9401d552458
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 20 more
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1504121139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1504121139'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span (tried for 20 second(s) with 500 milliseconds interval)
+	... 22 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1966772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1966772'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at com.tmb.factories.ExplicitWaitFactory.performExplicitWait(ExplicitWaitFactory.java:30)
 	at com.tmb.pages.BasePage.click(BasePage.java:22)
 	at com.tmb.pages.OrangeHRMHomePage.clickwelcome(OrangeHRMHomePage.java:22)
-	at Test.OrangeHRMTestCases.LoginLogoutTest(OrangeHRMTestCases.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at Test.OrangeHRMTestCases.loginLogoutTest(OrangeHRMTestCases.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
@@ -131,24 +133,25 @@ Session ID: 3b8e97984be5b8e736b7c9401d552458
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span&quot;}
-  (Session info: chrome=130.0.6723.92)
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3b8e97984be5b8e736b7c9401d552458, findElement {using=xpath, value=//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\Daulappa\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54389}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54389/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b8e97984be5b8e736b7c9401d552458
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+Command: [2ceb7342d58b5c665f098ca9b596ed4f, findElement {using=xpath, value=//*[@id=&quot;app&quot;]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53783}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53783/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ceb7342d58b5c665f098ca9b596ed4f
+	at jdk.internal.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -163,10 +166,10 @@ Session ID: 3b8e97984be5b8e736b7c9401d552458
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 20 more
+	... 22 more
 </pre></div></td>
-<td>21</td>
-<td>Test.OrangeHRMTestCases@367ffa75</td></tr>
+<td>22</td>
+<td>Test.OrangeHRMTestCases@1750fbeb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -177,10 +180,15 @@ Session ID: 3b8e97984be5b8e736b7c9401d552458
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Test.OrangeHRMTestCases.LoginLogoutTest()'><b>LoginLogoutTest</b><br>Test class: Test.OrangeHRMTestCases<br>Parameters: Admin, admin123</td>
+<td title='Test.OrangeHRMTestCases.loginLogoutTest()'><b>loginLogoutTest</b><br>Test class: Test.OrangeHRMTestCases<br>Test method: To check whether the user can sucessfully login and logout<br>Parameters: {fname=amunathan , password=admin123, testname=loginLogoutTest, execute=yes, username=Admin}</td>
 <td></td>
-<td>5</td>
-<td>Test.OrangeHRMTestCases@367ffa75</td></tr>
+<td>7</td>
+<td>Test.OrangeHRMTestCases@1750fbeb</td></tr>
+<tr>
+<td title='Test.OrangeHRMTestCases.newTest()'><b>newTest</b><br>Test class: Test.OrangeHRMTestCases<br>Test method: To check whether this test is executed<br>Parameters: {fname=, password=admin123, testname=newTest, execute=yes, username=Admin}</td>
+<td></td>
+<td>6</td>
+<td>Test.OrangeHRMTestCases@1750fbeb</td></tr>
 </table><p>
 </body>
 </html>

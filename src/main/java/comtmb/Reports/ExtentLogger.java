@@ -1,12 +1,9 @@
 package comtmb.Reports;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.tmb.driver.DriverManager;
 import com.tmb.enums.ConfigProperties;
 import com.tmb.utils.PropertyUtil;
+import com.tmb.utils.ScreenshotUtils;
 
 public class ExtentLogger {
 	
@@ -35,7 +32,7 @@ public class ExtentLogger {
 		if(PropertyUtil.get(ConfigProperties.PASSEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes")
 				&& isScreenshotNeeded)
 		{
-			ExtentManager.getExtentTest().pass(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
+			ExtentManager.getExtentTest().pass(message, MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 			
 		}
 		
@@ -49,7 +46,7 @@ public class ExtentLogger {
 		if(PropertyUtil.get(ConfigProperties.FAILEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes")
 				&& isScreenshotNeeded)
 		{
-			ExtentManager.getExtentTest().fail(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
+			ExtentManager.getExtentTest().fail(message, MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 			
 		}
 		else {
@@ -62,7 +59,7 @@ public class ExtentLogger {
 		if(PropertyUtil.get(ConfigProperties.SKIPPEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes")
 				&& isScreenshotNeeded)
 		{
-			ExtentManager.getExtentTest().skip(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64Image()).build());
+			ExtentManager.getExtentTest().skip(message, MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 			
 		}
 		else {
@@ -72,9 +69,10 @@ public class ExtentLogger {
 	
 	
 	
-	public static String getBase64Image() {
-		return ((TakesScreenshot)DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
-	}
+	
+	
+	
+	
 	
 	
 	

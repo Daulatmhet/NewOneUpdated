@@ -1,6 +1,7 @@
-package com.HRM.Listeners;
+ package com.HRM.Listeners;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -11,7 +12,6 @@ import comtmb.Reports.ExtentLogger;
 import comtmb.Reports.ExtentReport;
 public class ListenerClass implements ITestListener , ISuiteListener
 {
-	
 	@Override
 	public void onStart(ISuite suite)
 	{
@@ -23,7 +23,7 @@ public class ListenerClass implements ITestListener , ISuiteListener
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public void onFinish(ISuite suite)
 	{
@@ -43,7 +43,7 @@ public class ListenerClass implements ITestListener , ISuiteListener
 	@Override
 	public void onTestStart(ITestResult result)
 	{
-		ExtentReport.createTest(result.getMethod().getMethodName());
+		ExtentReport.createTest(result.getMethod().getDescription());
 		
 	}
 	
@@ -57,22 +57,24 @@ public class ListenerClass implements ITestListener , ISuiteListener
 	@Override
 	public void onTestFailure (ITestResult result)
 	{
-		
 		try {
 			ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
+			ExtentLogger.fail(result.getThrowable().toString());
+			ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}	
 	}
-	
 	@Override
 	public void onTestSkipped (ITestResult result)
 	{
 		ExtentReport.createTest(result.getMethod().getMethodName()+ "is Skipped");
 		
 	}
+	
+	
+	
 	
 	
 	
