@@ -13,9 +13,27 @@ public class FramworkConstants {
 		private static final String CONFIGPATH = RESOURCEPATH+"/config.prop";
 		private static final String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir")+"/extent-test-output/index.html";
 		private static String extentReportFilepath = "";
+		private static final String EXCELPATH =  System.getProperty("user.dir")+"/src/test/resources/Excel/Updated.xlsx";
+		private static final String RUNMANAGERSHEET = "RUNMANAGER";
+		
+		private static final String ITERATIONDATASHEET = "DATA";
 		
 		
+		public static String getExtentreportfolderpath() {
+			return EXTENTREPORTFOLDERPATH;
+		}
+
+
+		public static String getIterationdatasheet() {
+			return ITERATIONDATASHEET;
+		}
+
+
+		public static String getExcelpath() {
+			return EXCELPATH;
+		}
 		
+
 		public static String getExtentReportFilepath() throws Exception {
 			
 			if(extentReportFilepath.isEmpty()) {
