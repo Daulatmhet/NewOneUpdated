@@ -1,16 +1,11 @@
 package Test;
 
-import java.io.IOException;
-import java.lang.reflect.Method;
+import java.util.Map;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import com.tmb.driver.Driver;
-
-import comtmb.Reports.ExtentReport;
 
 public class BaseTest {
 	protected BaseTest()
@@ -19,11 +14,14 @@ public class BaseTest {
 	}
 	
 	
+	
+	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	public void setup(Method m) throws Exception
+	public void setup(Object[]data) throws Exception
 	{
-		ExtentReport.createTest(m.getName());
-		Driver.initDriver();
+		Map<String, String>map = (Map<String , String>)data[0];
+		Driver.initDriver(map.get("browser"));
+		
 	}
 	
 	@AfterMethod
@@ -34,3 +32,5 @@ public class BaseTest {
 	}
 
 }
+
+

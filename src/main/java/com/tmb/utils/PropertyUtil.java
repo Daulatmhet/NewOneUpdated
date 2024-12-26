@@ -29,8 +29,8 @@ public final class PropertyUtil {
 	private static final Map<String, String> CONFIGMAP = new HashMap<>();
 	
 	static {
-		try {
-		FileInputStream file = new FileInputStream(FramworkConstants.getConfigFilepath());
+		try (FileInputStream file = new FileInputStream(FramworkConstants.getConfigFilepath());
+){
 		property.load(file);
 		
 		
@@ -74,6 +74,8 @@ public final class PropertyUtil {
 //		
 //	}
 //}
+	
+	
 	
 
 //Two method fill compartable use those code

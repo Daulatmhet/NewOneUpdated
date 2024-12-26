@@ -10,7 +10,7 @@ public class ExtentManager {
 	
 	private static ThreadLocal<ExtentTest> exTest = new ThreadLocal<>();
 	
-	 static ExtentTest getExtentTest() // defalut  ..> It can be only accessed witin 
+	 public static ExtentTest getExtentTest() // defalut  ..> It can be only accessed witin 
 	{
 		return exTest.get();
 	}

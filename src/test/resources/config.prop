@@ -1,4 +1,4 @@
-url=https://www.amazon.in/
+url=https://www.amazon.in
 browser=chrome
   
 overridereports=yes
@@ -10,6 +10,7 @@ failedstepsscreenshots=yes
 skippedstepsscreenshots=yes
 
 
-browser=chrome
+
+
 
   

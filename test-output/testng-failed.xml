@@ -4,16 +4,17 @@
   <listeners>
     <listener class-name="com.HRM.Listeners.ListenerClass"/>
     <listener class-name="com.HRM.Listeners.MethodInterceptor"/>
+    <listener class-name="com.HRM.Listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="Test.OrangeHRMTestCases">
+      <class name="Test.AmazonDemoTest">
         <methods>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="loginLogoutTest" invocation-numbers="1"/>
+          <include name="amazonTest" invocation-numbers="0 0"/>
         </methods>
-      </class> <!-- Test.OrangeHRMTestCases -->
+      </class> <!-- Test.AmazonDemoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
