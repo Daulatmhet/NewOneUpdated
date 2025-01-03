@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.tmb.enums.ConfigProperties;
 import com.tmb.utils.PropertyUtil;
@@ -14,34 +15,31 @@ public class Driver
 {
 
 	private Driver(){
-
-
 	}
-
-
 
 	private static WebDriver driver;
 
 
-	public static void initDriver() throws Exception
+	public static void initDriver(String browser) throws Exception
 	{
-		if(Objects.isNull(driver))
+		if(Objects.isNull(DriverManager.getDriver()))
 		{
-			WebDriverManager.chromedriver().setup();
-
-
-			DriverManager.	setDriver(new ChromeDriver());
-			DriverManager.getDriver().get(PropertyUtil.get(ConfigProperties.URL)); 
-
-
-
+			if(browser.equalsIgnoreCase("chrome"))
+			{
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				DriverManager.setDriver(driver);
+			}
+			else if(browser.equalsIgnoreCase("Firefox")) {
+				
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				DriverManager.setDriver(driver);
+			
+			}
+				DriverManager.getDriver().get(PropertyUtil.get(ConfigProperties.URL));
 		}
 	}
-
-
-
-
-
 
 	public static void quitDriver()
 	{
@@ -50,10 +48,7 @@ public class Driver
 			DriverManager.getDriver().quit();
 			DriverManager.unload();
 
-
 		}
 	}
-
-
 }
 

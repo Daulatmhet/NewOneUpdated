@@ -14,8 +14,9 @@ public final class OrangeHRMTestCases extends BaseTest {
 	
 	private OrangeHRMTestCases()
 	{}
+	
 
-	@Test(dataProvider = "getData",dataProviderClass = DataproviderExcel.class,retryAnalyzer =RetryFailedTests.class )
+	@Test
 	public void loginLogoutTest(Map<String,String>data) throws Exception
 	{
 
@@ -27,7 +28,7 @@ public final class OrangeHRMTestCases extends BaseTest {
 		isEqualTo("OrangeHRM");
 	}
 
-	@Test(dataProvider = "getData",dataProviderClass = DataproviderExcel.class )
+	@Test
 	public void newTest(Map<String,String>data) throws Exception
 	{
 		String title =	new OrangeHRMLoginPage().enterusername(data.get("username")).enterPassword(data.get("password")).

@@ -8,6 +8,8 @@ import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.annotations.FramworkAnnotation;
+
 import comtmb.Reports.ExtentLogger;
 import comtmb.Reports.ExtentReport;
 public class ListenerClass implements ITestListener , ISuiteListener
@@ -44,6 +46,12 @@ public class ListenerClass implements ITestListener , ISuiteListener
 	public void onTestStart(ITestResult result)
 	{
 		ExtentReport.createTest(result.getMethod().getDescription());
+	ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FramworkAnnotation.class)
+		.author());
+	 
+	ExtentReport.addCategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FramworkAnnotation.class)
+			.category());
+	  
 		
 	}
 	
@@ -72,6 +80,8 @@ public class ListenerClass implements ITestListener , ISuiteListener
 		ExtentReport.createTest(result.getMethod().getMethodName()+ "is Skipped");
 		
 	}
+	
+	
 	
 	
 	

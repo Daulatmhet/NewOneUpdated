@@ -5,12 +5,18 @@
     <listeners>
         <listener class-name="com.HRM.Listeners.ListenerClass"/>
         <listener class-name="com.HRM.Listeners.MethodInterceptor"/>
+        <listener class-name="com.HRM.Listeners.AnnotationTransformer"/>
+
     </listeners>
 
     <test thread-count="1" name= "Test" parallel="methods" >
         <classes>
-            <class name="Test.OrangeHRMTestCases"/>
+            <class name="Test.AmazonDemoTest"/>
+
+             
+            
         </classes>
     </test> <!-- Test1 -->
 
 </suite> <!-- Suite -->
+

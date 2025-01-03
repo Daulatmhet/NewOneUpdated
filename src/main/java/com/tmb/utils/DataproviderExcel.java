@@ -34,14 +34,11 @@ public final class DataproviderExcel {
 	    	   {
 	    		   smalllist.add(list.get(i));
 	    	   }
-	    }
+	    } 
 	    
 	    list.removeAll(smalllist); 
 	    
 		return smalllist.toArray();
-	       
-	
-	
-	
+	  	
 }
 }

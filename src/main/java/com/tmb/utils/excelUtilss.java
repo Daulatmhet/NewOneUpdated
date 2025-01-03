@@ -14,16 +14,17 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import Iconstants.FramworkConstants;
 
+
 public class excelUtilss {
 
 	private excelUtilss() {}
 
 	public static List<Map<String, String>> getTestDetails(String SheetName){
 		List<Map<String , String>>list = null;
-		FileInputStream fs = null ;
 		
-		try {
-			fs = new FileInputStream(FramworkConstants.getExcelpath());
+		
+		try  (FileInputStream  fs = new FileInputStream(FramworkConstants.getExcelpath());)
+		{
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
 			
 			XSSFSheet sheet = workbook.getSheet(SheetName);
@@ -44,7 +45,7 @@ public class excelUtilss {
 				}
 				list.add(map);	
 			}
-			
+		
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
@@ -52,19 +53,7 @@ public class excelUtilss {
 		{
 			e.printStackTrace();
 		}
-		finally {
-			try {
-				if(Objects.nonNull(fs))
-				{
-				 	fs.close();
-				}
-			}catch(IOException e)
-			{
-				e.printStackTrace();
-			}
-		}
 		return list;
 	}
-
-
 }
+
