@@ -3,6 +3,7 @@ package com.tmb.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,8 @@ import java.util.Objects;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.qa.Exception.InvalidPathForException;
 
 import Iconstants.FramworkConstants;
 
@@ -47,11 +50,12 @@ public class excelUtilss {
 			}
 		
 		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
+			
+			throw new InvalidPathForException("Excel File trying read but not found");
 		}
 		catch(IOException e)
 		{
-			e.printStackTrace();
+			throw new InvalidPathForException("some Io Exception while reading the Excel data");
 		}
 		return list;
 	}
