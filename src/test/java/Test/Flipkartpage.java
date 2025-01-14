@@ -73,7 +73,7 @@ public class Flipkartpage {
 			System.out.println("Test Failed : The price Not Matched");
 		} 
 
-
+           
 
 
 	}
@@ -106,6 +106,8 @@ public class Flipkartpage {
 		String parentWindow = iterator.next();  // The parent window
 		driver.switchTo().window(parentWindow);
 		System.out.println("Switched back to the parent window: " + parentWindow);
+
+		
 	}
 }
 
